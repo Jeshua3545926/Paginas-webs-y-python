@@ -1,0 +1,324 @@
+html, body {
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Fondo con sombra */
+.hola {
+    width: 100%;
+    height: 1000px;
+    background: linear-gradient(rgba(0, 0, 0, 0.422), rgba(0, 0, 0, 0.836)), 
+    url("https://www.consalud.es/uploads/s1/12/89/17/7/deportista-foto-freepik.jpeg");
+    background-repeat: no-repeat;
+    background-size: 1800px;
+    background-position: -300px;
+    background-attachment: fixed;
+    box-shadow: inset 0 0 50px rgb(0, 0, 0);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.nike{
+color: #ffffff;
+text-align: center;
+margin-top: -300px;
+}
+
+.Mas{
+    margin-top: 30px;
+    width: 300px;
+    border:none;
+    color:#333;
+    background-color: #ffd000;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: bold;
+    padding: 10px;
+    box-shadow: 0 0 10px #ffd000;
+    transition: transform 1s;
+}
+
+.Mas:hover{
+
+    transform: translateY(0px) scale(1.2);
+    background: #ffd000;
+    color: #333;
+    
+}
+
+/* Estilos para el menú */
+.menu {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: rgba(255, 255, 255, 0);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que esté sobre otros elementos */
+    background-color: #000000;
+    position: sticky;
+    transition: background-color 0.3s, opacity 0.3s; 
+}
+
+.menu.sticky {
+    background-color: rgba(0, 0, 0, 0.682); /* Fondo transparente */
+    opacity: 0.7; /* Transparencia */
+}
+
+.menu .productos,
+.menu .compra {
+    color: rgb(255, 255, 255);
+    border: none;
+    background-color: transparent;
+    font-size: 13px;
+    cursor: pointer;
+    height:40px;
+    margin-left: 400px;
+
+}
+
+.menu .productos{
+
+    margin-left: 50px;
+}
+
+.menu .productos:hover,
+.menu .compra:hover {
+color: rgb(0, 208, 255);
+
+}
+
+/* Contenedor de productos */
+.productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.producto {
+
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 4px 8px rgb(255, 255, 255);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: transform 1s ease;
+    transform: rotateY(10deg) rotateX(-30deg) 
+}
+.producto:hover{
+
+    box-shadow: 0 4px 50px rgb(0, 191, 255);
+    transform: rotateY(10deg) rotateX(5deg) translateZ(16px);
+
+}
+.producto-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.precio {
+    color: gold;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.btn-agregar {
+    background-color:  rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0px 3px  1px rgb(0, 208, 0);
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+   gap: 10px;
+    margin-top: 10px;
+    transition: background-color 1s, transform 0.5s;
+    text-decoration: none;
+}
+
+.btn-agregar:hover {
+    box-shadow: 0px 0px  3px rgb(0, 0, 0);
+    background-color: rgb( 0, 200, 0);
+    transform: translateY(-5px) scale(1.2);
+    border-radius: 20px;
+
+
+}
+
+/* Imágenes de tenis Puma */
+.producto.p1 {
+
+    background-image: url('https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_450,h_450/global/381693/01/sv01/fnd/IND/fmt/png');
+}
+
+.producto.p2 {
+    background-image: url('https://tse2.mm.bing.net/th?id=OIP.-nPScteYKRWj6Ztdsp9ubAHaFm&pid=Api&P=0&h=180');
+}
+
+.producto.p3 {
+    background-image: url('https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_450,h_450/global/381821/01/sv01/fnd/IND/fmt/png');
+}
+
+.producto.p4 {
+    background-image: url('https://tse1.mm.bing.net/th?id=OIP.vd8xGugw3wyA8FMepST53gHaHa&pid=Api&P=0&h=180');
+}
+
+.producto.p5 {
+    background-image: url('https://tse3.mm.bing.net/th?id=OIP.xyOC01QTk2GXb1ECPshmfgHaFf&pid=Api&P=0&h=180');
+}
+
+.producto.p6 {
+    background-image: url('https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_450,h_450/global/371202/01/sv01/fnd/IND/fmt/png');
+}
+
+/* Ajustes para pantallas grandes */
+@media (min-width: 1024px) {
+    .producto {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/* Ajustes para pantallas medianas */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .producto {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 767px) {
+    .producto {
+        width: calc(100% - 30px); /* Ajuste para ocupar el ancho completo menos el padding */
+        max-width: 300px;
+        height: 250px;
+        margin: 15px auto; /* Centrar y ajustar margen */
+    }
+
+    .productos-container {
+        padding: 15px; /* Reducción adicional del padding */
+    }
+
+    /* Menú */
+    .menu {
+        margin-top: -20px;
+position: sticky;
+        align-items: center;
+        height: auto;
+        position: static;
+        background-color: rgb(0, 0, 0); /* Mejora la legibilidad del menú en pantallas pequeñas */
+    }
+
+    .menu .productos,
+    .menu .compra {
+        margin: 10px 0;
+    }
+}
+
+/* Otros estilos */
+.ofrecemos {
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(0, 0, 0);
+    padding: 20px;
+font-weight: bold;
+}
+
+.ofrecemos h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.ofrecemos p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.garantias-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+
+
+.garantia {
+    background-color: rgba(93, 93, 93, 0.078);
+    padding: 20px;
+    border-radius: 100px;
+    text-align: center;
+    flex: 1;
+    transition: transform 0.67s, box-shadow 0.3s, height 0.67s ease;
+    height: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.garantia:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    height: 200px;
+}
+
+.garantia i {
+    font-size: 40px;
+    color: gold;
+    margin-bottom: 10px;
+}
+
+.garantia p, .garantia ul {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.garantia:hover p, .garantia:hover ul {
+    opacity: 1;
+}
+
+.garantia ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.garantia ul li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+
+
+
+
+.footer {
+    margin-top: 30px;
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    border: none;
+box-shadow: 0 4px 30px rgb(0, 162, 255);
+
+
+}
+

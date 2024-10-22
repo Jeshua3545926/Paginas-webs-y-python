@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GygaWeb</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos generales */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #101010;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #141414;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            color: #e2b923;
+        }
+        header nav {
+            margin-top: 10px;
+        }
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        header nav ul li {
+            margin: 0 15px;
+        }
+        header nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        header nav ul li a:hover {
+            color: #e2b923;
+        }
+        /* Hero Section */
+        #hero {
+            background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvmHYHP8ox4h0xIF-yR-Ep5o36y4dKuvGpIA&s") no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #ffffff;
+            background-size: cover;
+        }
+        .hero-content {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .hero-content h2 {
+            font-size: 3em;
+        }
+        .hero-content p {
+            font-size: 1.2em;
+        }
+        /* Services Section */
+        #services {
+            background-color: #222222;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        #services h2 {
+            color: #e2b923;
+            margin-bottom: 30px;
+        }
+        .services-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .service-card {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 5px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        .service-card:hover {
+            transform: scale(1.05);
+        }
+        .service-card i {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #e2b923;
+        }
+        .service-card h3 {
+            font-size: 1.5em;
+            color: #e2b923;
+        }
+        .service-card p {
+            display: none;
+            font-size: 1em;
+            margin-top: 10px;
+        }
+        .service-card.expanded p {
+            display: block;
+        }
+        /* Contact Section */
+        #contact {
+            padding: 50px 20px;
+            background-color: #1c1c1c;
+            text-align: center;
+        }
+        #contact h2 {
+            color: #e2b923;
+            margin-bottom: 30px;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: #ffffff;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #e2b923;
+            color: #000000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #d1a123;
+        }
+        /* Footer */
+        footer {
+            background-color: #141414;
+            padding: 20px;
+            text-align: center;
+            color: #888888;
+        }
+        footer a {
+            color: #e2b923;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>GygaWeb</h1>
+        <nav>
+            <ul>
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li ><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="hero">
+        <div class="hero-content">
+            <h2>Soluciones Web Innovadoras</h2>
+            <p>En GygaWeb, ofrecemos soluciones web personalizadas para tu negocio.</p>
+        </div>
+    </section>
+    <section id="services">
+        <h2>¿Qué ofrecemos?</h2>
+        <div class="services-container">
+            <div class="service-card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Diseño Personalizado</h3>
+                <p>Diseñamos sitios web únicos adaptados a las necesidades de tu empresa.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-code"></i>
+                <h3>Desarrollo Web</h3>
+                <p>Implementamos funcionalidades avanzadas para tu sitio web.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-cogs"></i>
+                <h3>Consultoría Técnica</h3>
+                <p>Ofrecemos asesoramiento en tecnología web para optimizar tu presencia en línea.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-database"></i>
+                <h3>Integración de Base de Datos</h3>
+                <p>Integramos soluciones de bases de datos para aplicaciones web complejas.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contacto</h2>
+        <form>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 GygaWeb. Todos los derechos reservados.</p>
+        <p><a href="#">Política de Privacidad</a> | <a href="#">Términos de Uso</a></p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.service-card').forEach(card => {
+                card.addEventListener('click', () => {
+                    card.classList.toggle('expanded');
+                });
+            });
+        });
+
+        document.addEventListener('click',function(){
+            document.querySelector('a[href="#contact"]').addEventListener('click', function() {
+                document.querySelector('#name').style.cPolor = 'green'; // Cambia 'blue' al color que prefieras
+            });
+        });
+    </script>
+</body>
+</html>
